@@ -21,15 +21,13 @@ const CreateAuthComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#home">Facebook</Nav.Link>
+            <Nav.Link href="#link">Instagrams</Nav.Link>
+            <Nav.Link href="#about">Tiktok</Nav.Link>
           </Nav>
-          <Link to="/crud" className="btn-btn-link">Crud</Link>
         </Navbar.Collapse>
       </Navbar>
       <div className="container">
-        {/* Your content here */}
       </div>
     </div>
         <Col>
@@ -37,12 +35,11 @@ const CreateAuthComponent = () => {
           <Form><Form.Group className="mb-4" controlId="exampleForm.ControlInput1">
             <Form.Label>Create Account</Form.Label>
             <Form.Control type="email" placeholder="name@example.com" />
-          </Form.Group>
             <Form.Group className="mb-5" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Password</Form.Label>
               <Form.Control size='lg' type="password" placeholder="Enter password" />
             </Form.Group>
-            <Button as="input" type="submit" value="Sign up" />{' '}
+            </Form.Group> <Link to="/crud" className="btn-btn-link">Crud</Link>
             <Link to="/login" className="btn-btn-link">Login</Link>
           </Form>
         </Col>
@@ -53,4 +50,4 @@ const CreateAuthComponent = () => {
 }
 
 
-export default CreateAuthComponent
+export default CreateAuthComponent;

@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 
 const LoginAuthComponent = () => {
@@ -19,15 +21,14 @@ const LoginAuthComponent = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <Nav.Link href="#about">About</Nav.Link>
+                <Nav.Link href="#">Facebook</Nav.Link>
+                <Nav.Link href="#">Instagram</Nav.Link>
+                <Nav.Link href="#">Tiktok</Nav.Link>
               </Nav>
-              <Link to="/crud" className="btn-btn-link">Crud</Link>
             </Navbar.Collapse>
           </Navbar>
           <div className="container">
-            {/* Your content here */}
+
           </div>
         </div>
         <Col></Col>
@@ -35,32 +36,38 @@ const LoginAuthComponent = () => {
       <Row>
         <Col></Col>
         <Col>
-            <h1>Booking Hotel Management System</h1>
-          <Form>
-            <Form.Group className="mb-4" controlId='text area1'>
+          <p>BOOKING HOTEL MANAGEMENT SYSTEM</p>
+          <Form className='border'>
+            <Form.Group className="mb-2" controlId="exampleForm.ControlInput1">
               <Form.Label>Name</Form.Label>
+              <Form.Control placeholder="First name" />
+              <Form.Control placeholder="Last name" />
             </Form.Group>
-            
-            <Form.Group className="mb-4" controlId="exampleForm.ControlInput1">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="name@example.com" />
-          </Form.Group> <br />
-            <Form.Group className="mb-5" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Password</Form.Label>
-              <Form.Control size='lg' type="password" placeholder="Enter password" />
-            </Form.Group> <br />
-            <Form.Group className="mb-5" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Confirm Password</Form.Label>
-              <Form.Control size='lg' type="Confirm password" placeholder="Enter your confirm password" />
+            <Form.Group className="mb-2" controlId="exampleForm.ControlInput2">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="name@example.com" />
             </Form.Group>
-            <Button as="input" type="submit" value="login" />{' '}
-            <Link to="/create" className="btn-btn-link">Create Account</Link>
-            <Link to="Crud" className="btn-btn-link">Crud</Link>
+            <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Room Type</Form.Label>
+              <Form.Control size='lg' type="password" placeholder="Enter room type" />
+              <NavDropdown title="Room Number" id="nav-dropdown"/>
+            </Form.Group>
+            <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Check in</Form.Label>
+              <Form.Control size='lg' type="Check in" placeholder="mm/dd/yy" />
+            </Form.Group>
+            <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Check out</Form.Label>
+              <Form.Control size='lg' type="Check out" placeholder="mm/dd/yy" />
+            </Form.Group>
+            <Link to="/create" className="btn-btn-link">Create</Link> <br />
+            <Link to="/crud" className="btn-btn-link">Crud</Link>
+
 
           </Form>
         </Col>
         <Col></Col>
-      </Row>
+      </Row >
     </Container >
   )
 }
